@@ -252,12 +252,12 @@ export function Crafted() {
               className="h-full w-full object-cover transition-opacity duration-300"
             />
             {/* Cinematic Gradient Overlays for contrast & elegance */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-obsidian/85" />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(10,10,10,0.8)_100%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-obsidian/95 via-transparent to-obsidian/70" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_60%,rgba(10,10,10,0.5)_100%)]" />
           </div>
 
           {/* Top Bar HUD / Telemetry */}
-          <div className="relative z-20 mx-auto flex w-full max-w-[1600px] items-center justify-between px-5 pt-18 sm:px-6 sm:pt-20 md:px-10 md:pt-24">
+          <div className="relative z-20 mx-auto flex w-full max-w-[1600px] items-center justify-between px-5 pt-18 sm:px-6 sm:pt-20 md:px-10 md:pt-22">
             <div className="flex items-center gap-2 sm:gap-3">
               <span className="flex h-2 w-2 animate-pulse rounded-full bg-gold sm:h-2.5 sm:w-2.5" />
               <p className="eyebrow text-[9px] tracking-[0.16em] text-gold sm:text-[10px] sm:tracking-[0.2em]">
@@ -285,54 +285,23 @@ export function Crafted() {
             </div>
           </div>
 
-          {/* Center Dynamic Headings & Assembly Phase Box */}
-          <div className="relative z-20 mx-auto w-full max-w-[1600px] px-5 sm:px-6 md:px-10">
-            <div className="grid gap-4 sm:gap-6 lg:grid-cols-12 lg:items-end">
-              {/* Left Title */}
-              <div className="lg:col-span-7">
-                <span className="eyebrow inline-block rounded border border-gold/40 bg-gold/10 px-2.5 py-0.5 text-[9px] text-gold sm:px-3 sm:py-1">
-                  Assembly Phase {activePhase.step} of 04
+          {/* Bottom Area: Clean Headline & Anatomy Step Pills placed down to keep center video 100% unobstructed */}
+          <div className="relative z-20 mx-auto w-full max-w-[1600px] px-5 pb-5 sm:px-6 sm:pb-7 md:px-10 md:pb-8">
+            <div className="mb-4 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+              <div>
+                <span className="eyebrow inline-block rounded border border-gold/40 bg-gold/10 px-2.5 py-0.5 text-[9px] text-gold">
+                  Precision Handcraft · Phase {activePhase.step} of 04
                 </span>
-                <h2 className="display mt-2 text-[8vw] leading-[0.9] text-paper sm:text-[7vw] md:text-[4.8vw]">
+                <h2 className="display mt-1.5 text-[6.5vw] leading-tight text-paper sm:text-[4vw] md:text-[2.8vw]">
                   Millimetres decide everything<span className="text-gold">.</span>
                 </h2>
               </div>
-
-              {/* Right Active Step Highlight Card */}
-              <div className="lg:col-span-5">
-                <div className="rounded-lg border border-paper/15 bg-obsidian/85 p-4 sm:p-5 md:p-6 backdrop-blur-xl shadow-2xl transition-all duration-300">
-                  <div className="flex items-center justify-between border-b border-paper/10 pb-2.5">
-                    <span className="eyebrow text-[10px] font-semibold text-gold sm:text-[11px]">
-                      Phase {activePhase.step} · {activePhase.title}
-                    </span>
-                    <span className="rounded bg-gold/20 px-2 py-0.5 font-mono text-[9px] text-gold sm:text-[10px]">
-                      {activePhase.metric}
-                    </span>
-                  </div>
-                  <p className="mt-2 text-xs leading-relaxed text-steel sm:mt-3">
-                    {activePhase.body}
-                  </p>
-
-                  {/* Visual Progress Bar */}
-                  <div className="mt-3 sm:mt-4">
-                    <div className="flex justify-between text-[9px] text-steel/70">
-                      <span>FRAME TIMELINE ({currentFrameRef.current}/{TOTAL_FRAMES})</span>
-                      <span className="font-mono text-gold font-medium">{Math.round(progress * 100)}%</span>
-                    </div>
-                    <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-paper/15">
-                      <div
-                        className="h-full bg-gradient-to-r from-gold/60 via-gold to-gold-soft transition-all duration-75 ease-out"
-                        style={{ width: `${Math.max(4, Math.round(progress * 100))}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p className="max-w-md text-[11px] leading-relaxed text-steel/90 sm:text-xs">
+                {activePhase.body}
+              </p>
             </div>
-          </div>
 
-          {/* Bottom Step Pills */}
-          <div className="relative z-20 mx-auto w-full max-w-[1600px] px-5 pb-5 sm:px-6 sm:pb-8 md:px-10 md:pb-10">
+            {/* Step Pills */}
             <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-4 sm:gap-2.5 md:gap-3">
               {assemblyPhases.map((phase) => {
                 const isCurrent = progress >= phase.range[0] && progress <= phase.range[1];
