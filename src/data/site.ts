@@ -140,20 +140,19 @@ export const stores: Store[] = [
   },
 ];
 
-/** Official Brand Partners carried by Bapat Optics */
+/** Official 65+ Brand Partners carried by Bapat Optics */
 export const brands = [
-  "Armani Exchange",
-  "Dolce & Gabbana",
-  "Oakley",
-  "Versace",
-  "Vogue Eyewear",
-  "Burberry",
-  "Line Art",
-  "Mont Blanc",
-  "Polo Ralph Lauren",
-  "United Colors of Benetton",
-  "Ray-Ban",
-  "Humphreys",
+  "Armani Exchange", "Burberry", "Calvin Klein", "Carl Zeiss", "Dolce & Gabbana",
+  "Emporio Armani", "Ferrari", "Frank Mullar", "Michael Kors", "Mont Blanc",
+  "Oakley", "Polo Ralph Lauren", "Prada", "Ray-Ban", "Swarovski", "Tom Ford",
+  "Tommy Hilfiger", "Versace", "Vogue Eyewear", "Stepper", "Modo", "Bausch + Lomb",
+  "Altr Eyewear", "Antanio Donati", "Bass Baritone", "Classic", "Daniel Parker",
+  "Esprit", "Eye Player", "Grafitti", "Grandeurr", "Humphreys", "Icon", "Ignite",
+  "IOI", "Jack & Jinny", "Jorgio", "K&D", "Mania", "Mania Luxe", "Mercurii",
+  "Mikael Anzel", "One Degree", "Orgreen", "Page 4", "Pavarotti", "Posh", "Puma",
+  "Radius", "Ralph Lauren", "Rosvin Bugs", "Scorplus", "See Saw", "Selveto Ferragamo",
+  "Sniper", "Solitare", "Three Eyes", "Transmit", "UCB", "Victor Eye Wear",
+  "Vintage", "Volar Eyewear", "William Morris", "Xite", "Zeiss"
 ];
 
 export const contact = {
@@ -166,24 +165,6 @@ export const contact = {
   tagline: "See Different. Experience Precision.",
   officialWebsite: "https://www.bapatoptics.com/",
 };
-
-export const benefits = [
-  {
-    title: "100% Free Eye Checkup",
-    subtitle: "Certified Optometrists & Advanced Zeiss Machinery",
-    description: "Get a comprehensive digital eye evaluation at zero cost at both Pune locations.",
-  },
-  {
-    title: "Free In-House Servicing",
-    subtitle: "Lifetime Service & Repair Guarantee",
-    description: "Frame adjustments, nose pad replacements, screw tightening and sonic ultrasonic cleaning are always free.",
-  },
-  {
-    title: "Zeiss Precision Fitting",
-    subtitle: "VISUFIT 1000 & 3D 180° AI Measurement",
-    description: "Sub-millimetre lens centration for sharp, strain-free vision.",
-  },
-];
 
 export const categories: ProductCategory[] = [
   "Eyeglasses",
@@ -205,15 +186,12 @@ export const whatsappUrl = (message: string) =>
 
 /**
  * High-definition Video Assets
- * 1. frameAssembly: Scroll-driven interactive assembling showcase
- * 2. modelDesigner: Haute couture designer eyewear lifestyle showcase
  */
 export const media = {
-  frameAssembly: "/videos/frame-assembly.mp4",
   modelDesigner: "/videos/model-designer.mp4",
-  // Fallback aliases
-  productVideo: "/videos/frame-assembly.mp4",
-  lifestyleVideo: "/videos/model-designer.mp4",
-  logo: "/bapat-logo.png",
-  favicon: "/favicon.jpg",
+  eyeTesting: "/videos/eye-testing.mp4",
+  storeInterior: "/videos/store-interior.mp4",
+  productMacro: "/videos/product-macro.mp4",
+  customerFitting: "/videos/customer-fitting.mp4",
+  logoReveal: "/videos/logo-reveal.mp4",
 };
